@@ -1,0 +1,149 @@
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+body {
+  background: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: #E01E1F;
+  }
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #ECECEC;
+    border-radius: 20px;
+  }
+}
+
+.container {
+	max-width: 1216px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.header {
+	background: #ffffff;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+	padding: 20px 0;
+
+	.header_wrap {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.header_center_wrap {
+		display: flex;
+		align-items: center;
+		gap: 40px;
+	}
+
+	.header_btn {
+		display: flex;
+		padding: 12px 16px;
+		justify-content: center;
+		align-items: center;
+		gap: 8px;
+
+		width: 140px;
+		height: 44px;
+		border-radius: 8px;
+		background: #011e34;
+
+		color: #fff;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+		letter-spacing: -0.32px;
+
+		.burger_wrap {
+			width: 20px;
+			height: 20px;
+			position: relative;
+
+			span {
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				background: #fff;
+				border-radius: 5px;
+				left: 0;
+			}
+
+			.burger1 {
+				transition: all ease 0.5s;
+				top: 0;
+			}
+
+			.burger2 {
+				transition: all ease 0.5s;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				opacity: 1;
+			}
+
+			.burger3 {
+				transition: all ease 0.5s;
+				bottom: 0;
+			}
+		}
+	}
+
+	.header_center {
+		display: flex;
+		align-items: center;
+		gap: 32px;
+
+		a {
+			color: #667085;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 24px;
+		}
+	}
+
+	.header_label {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		align-self: stretch;
+
+		padding: 10px 14px;
+		border-radius: 8px;
+		border: 1px solid #d0d5dd;
+		background: #fff;
+		max-width: 263px;
+		width: 100%;
+		box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+	}
+
+	.header_search {
+		outline: none;
+		border: none;
+
+		color: #667085;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 24px;
+	}
+}
