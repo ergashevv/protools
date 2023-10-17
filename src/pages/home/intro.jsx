@@ -78,8 +78,8 @@ function Intro() {
 								</svg>
 							</span>
 						</div>
-						<h3>Dealer network</h3>
-						<p>Wide network of Dealers</p>
+						<h3>Quality assurance</h3>
+						<p>All products are certified</p>
 					</div>
 					<div className='intro_wrap_card'>
 						<div className='intro_wrap_card_bubble'>
@@ -101,8 +101,8 @@ function Intro() {
 								</svg>
 							</span>
 						</div>
-						<h3>Dealer network</h3>
-						<p>Wide network of Dealers</p>
+						<h3>Delivery on time</h3>
+						<p>Prompt delivery and unloading of goods</p>
 					</div>
 				</div>
 			</div>
