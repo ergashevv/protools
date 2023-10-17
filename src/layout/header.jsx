@@ -8,7 +8,7 @@ import '../global.scss'
 function Header() {
 	return (
 		<header className='header'>
-			<div className='container header_wrap'>
+			<div className='header_wrap container'>
 				<Link to='/' className='header_left'>
 					<img src={logo} alt='logo' />
 				</Link>
