@@ -1,0 +1,32 @@
+.newsPage {
+	padding: 100px 0;
+	.title {
+		color: #101828;
+		font-size: 48px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 50px;
+		letter-spacing: -0.96px;
+		margin-bottom: 32px;
+	}
+
+	.newsPage_wrap {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 28px;
+	}
+}
+
+@media (max-width: 500px) {
+	.newsPage {
+		.title {
+			font-size: 32px;
+			line-height: 30px;
+		}
+
+		.newsPage_wrap {
+			gap: 48px;
+		}
+	}
+}

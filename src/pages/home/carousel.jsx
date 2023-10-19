@@ -1,6 +1,6 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import {  Pagination, EffectFade, Autoplay } from 'swiper/modules'
+import { Pagination, EffectFade, Autoplay } from 'swiper/modules'
 
 import banner1 from '../../public/images/banner.png'
 import banner2 from '../../public/images/banner2.jpg'
@@ -9,9 +9,11 @@ import banner3 from '../../public/images/banner3.jpg'
 import 'swiper/css'
 import './home.scss'
 
+const data = [{ img: banner1 }, { img: banner2 }, { img: banner3 }]
+
 const Carousel = () => {
 	return (
-		<div className='slider'>
+		<div className='slider  container'>
 			<Swiper
 				style={{
 					'--swiper-navigation-color': '#fff',
@@ -27,24 +29,17 @@ const Carousel = () => {
 					clickable: true,
 				}}
 				navigation={true}
-				modules={[ Pagination, EffectFade, Autoplay]}
+				modules={[Pagination, EffectFade, Autoplay]}
 				className='mySwiper container'
 			>
-				<SwiperSlide
-					style={{
-						backgroundImage: `url(${banner3})`,
-					}}
-				></SwiperSlide>
-				<SwiperSlide
-					style={{
-						backgroundImage: `url(${banner1})`,
-					}}
-				></SwiperSlide>
-				<SwiperSlide
-					style={{
-						backgroundImage: `url(${banner2})`,
-					}}
-				></SwiperSlide>
+				{data.map((item, index) => (
+					<SwiperSlide
+						key={index}
+						style={{
+							backgroundImage: `url(${item.img})`,
+						}}
+					></SwiperSlide>
+				))}
 			</Swiper>
 		</div>
 	)

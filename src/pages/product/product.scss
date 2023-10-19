@@ -1,0 +1,222 @@
+.product {
+	margin-top: 90px;
+
+	.productHero {
+		background: #f6f7fa;
+		padding-top: 20px;
+		padding-bottom: 200px;
+
+		.productHero_main {
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+			gap: 50px;
+
+			.productHero_left {
+				width: 50%;
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+				gap: 24px;
+				height: 560px;
+
+				.swiper {
+					width: 100%;
+					height: 100%;
+
+					height: 300px;
+					margin-left: auto;
+					margin-right: auto;
+				}
+
+				.swiper_card {
+					display: flex;
+					width: 100%;
+					padding: 6px 3px 0.3px 3px;
+					justify-content: center;
+					align-items: center;
+					border-radius: 10px;
+					background: #fff;
+				}
+
+				.swiper-slide img {
+					display: block;
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+				}
+
+				.swiper-slide {
+					background-size: cover;
+					background-position: center;
+				}
+
+				.mySwiper2 {
+					height: 100%;
+					width: 100%;
+				}
+
+				.mySwiper {
+					width: 130px;
+					height: 100%;
+					box-sizing: border-box;
+					padding: 10px 0;
+				}
+
+				.mySwiper .swiper-slide {
+					height: 100%;
+					opacity: 0.4;
+				}
+
+				.mySwiper .swiper-slide-thumb-active {
+					opacity: 1;
+				}
+
+				.swiper2_card {
+					height: auto;
+					border-radius: 30px;
+					background: #fff;
+				}
+
+				.swiper-button-prev,
+				.swiper-button-next {
+					display: none;
+				}
+
+				svg {
+					position: absolute;
+					top: 30px;
+					right: 30px;
+				}
+			}
+
+			.productHero_right {
+				width: 50%;
+				h2 {
+					color: #101828;
+					font-size: 48px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: 50px;
+					letter-spacing: -0.96px;
+					margin-bottom: 25px;
+				}
+
+				.productHero_text_wrap {
+					div {
+						display: flex;
+						align-items: flex-start;
+						justify-content: space-between;
+						margin-bottom: 10px;
+					}
+				}
+
+				.productHero_name {
+					color: #000;
+					font-size: 24px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: normal;
+					letter-spacing: -0.24px;
+				}
+
+				.productHero_value {
+					color: #000;
+					text-align: right;
+					font-size: 24px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: normal;
+					letter-spacing: -0.24px;
+				}
+			}
+
+			margin-bottom: 36px;
+		}
+
+		.productHero_title {
+			color: #101828;
+			font-size: 32px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 50px;
+			letter-spacing: -0.64px;
+		}
+
+		.productHero_description {
+			color: #000;
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.product {
+		.productHero {
+			padding-bottom: 80px;
+
+			.productHero_main {
+				flex-direction: column;
+				gap: 32px;
+
+				.productHero_left {
+					width: 100%;
+					gap: 12px;
+					height: 290px;
+
+					.swiper {
+						height: 290px;
+					}
+
+					.mySwiper2 {
+						height: 100%;
+						width: 260px;
+					}
+
+					.mySwiper {
+						width: 60px;
+					}
+
+					svg {
+						top: 15px;
+						right: 15px;
+					}
+				}
+
+				.productHero_right {
+					width: 100%;
+					h2 {
+						font-size: 32px;
+						line-height: 30px;
+						margin-bottom: 20px;
+					}
+
+					.productHero_name {
+						font-size: 18px;
+						letter-spacing: -0.18px;
+					}
+
+					.productHero_value {
+						font-size: 18px;
+						letter-spacing: -0.18px;
+					}
+				}
+
+				margin-bottom: 32px;
+			}
+
+			.productHero_title {
+				font-size: 24px;
+				letter-spacing: -0.48px;
+			}
+
+			.productHero_description {
+				font-size: 18px;
+				max-width: 340px;
+			}
+		}
+	}
+}

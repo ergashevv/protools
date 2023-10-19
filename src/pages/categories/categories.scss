@@ -1,0 +1,34 @@
+.categoriesPage {
+	padding: 100px 0;
+	.title {
+		color: #101828;
+		font-size: 32px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 40px;
+		letter-spacing: -0.64px;
+		margin-bottom: 25px;
+	}
+
+	.categoriesPage_wrap {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 20px;
+	}
+}
+
+@media (max-width: 500px) {
+	.categoriesPage {
+		padding-top: 100px;
+		padding-bottom: 40px;
+		.title {
+			line-height: 38px;
+			margin-bottom: 16px;
+		}
+
+		.categoriesPage_wrap {
+			gap: 5px;
+		}
+	}
+}
