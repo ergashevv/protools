@@ -61,9 +61,9 @@ function News() {
 									<path
 										d='M7 17L17 7M17 7H7M17 7V17'
 										stroke='#101828'
-										stroke-width='2'
-										stroke-linecap='round'
-										stroke-linejoin='round'
+										strokeWidth='2'
+										strokeLinecap='round'
+										strokeLinejoin='round'
 									/>
 								</svg>
 							</span>

@@ -45,7 +45,7 @@ function Products({ title }) {
 					navigation={true}
 					breakpoints={{
 						100: {
-							slidesPerView: 1,
+							slidesPerView: 1.5,
 						},
 						1024: {
 							slidesPerView: 4,
