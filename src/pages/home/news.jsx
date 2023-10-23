@@ -5,6 +5,7 @@ import image2 from '../../public/images/news2.png'
 import image3 from '../../public/images/news3.png'
 import LinearCard from '../../components/linearCard'
 import Oval from '../../components/oval'
+import { Link } from 'react-router-dom'
 
 const ovalData = [
 	{ bg: '#F9F5FF', color: `#6941C6`, text: 'Design' },
@@ -85,19 +86,20 @@ function News() {
 					</div>
 					<div className='news_right'>
 						{data.map((item, index) => (
-							<LinearCard
-								image={item.image}
-								headline={item.headline}
-								title={item.title}
-								description={item.info}
-								text={item.text}
-								bgcolor={item.bg}
-								color={item.color}
-								text2={item.text2}
-								bgcolor2={item.bg2}
-								color2={item.color2}
-								key={index}
-							/>
+							<Link to={"/news"} key={index}>
+								<LinearCard
+									image={item.image}
+									headline={item.headline}
+									title={item.title}
+									description={item.info}
+									text={item.text}
+									bgcolor={item.bg}
+									color={item.color}
+									text2={item.text2}
+									bgcolor2={item.bg2}
+									color2={item.color2}
+								/>
+							</Link>
 						))}
 					</div>
 				</div>

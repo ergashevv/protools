@@ -64,7 +64,6 @@ body {
 
 			.header_btn {
 				display: flex;
-				padding: 12px 16px;
 				justify-content: center;
 				align-items: center;
 				gap: 8px;
@@ -84,36 +83,61 @@ body {
 				outline: none;
 				border: none;
 
-				.burger_wrap {
+				.hamburger {
 					width: 20px;
-					height: 20px;
-					position: relative;
-
-					span {
+					height: 2px;
+					background: #fff;
+					border-radius: 5px;
+					box-shadow: 0 2px 5px rgb(255, 101, 47, 0.2);
+					transition: all 0.5s ease-in-out;
+					&::before {
+						content: '';
 						position: absolute;
-						width: 100%;
+						width: 20px;
 						height: 2px;
 						background: #fff;
 						border-radius: 5px;
-						left: 0;
+						transition: all 0.5s ease-in-out;
+						transform: translateY(-10px);
 					}
-
-					.burger1 {
-						transition: all ease 0.5s;
-						top: 0;
+					&::after {
+						content: '';
+						position: absolute;
+						width: 20px;
+						height: 2px;
+						background: #fff;
+						border-radius: 5px;
+						transition: all 0.5s ease-in-out;
+						transform: translateY(10px);
 					}
+				}
 
-					.burger2 {
-						transition: all ease 0.5s;
-						top: 0;
-						bottom: 0;
-						margin: auto;
-						opacity: 1;
+				.activeHamburger {
+					width: 20px;
+					height: 2px;
+					border-radius: 5px;
+					transform: translateX(-50px);
+					background: transparent;
+					transition: all 0.5s ease-in-out;
+					&::before {
+						content: '';
+						position: absolute;
+						width: 20px;
+						height: 2px;
+						background: #fff;
+						border-radius: 5px;
+						transition: all 0.5s ease-in-out;
+						transform: rotate(45deg) translate(35px, -35px);
 					}
-
-					.burger3 {
-						transition: all ease 0.5s;
-						bottom: 0;
+					&::after {
+						content: '';
+						position: absolute;
+						width: 20px;
+						height: 2px;
+						background: #fff;
+						border-radius: 5px;
+						transition: all 0.5s ease-in-out;
+						transform: rotate(-45deg) translate(35px, 35px);
 					}
 				}
 			}
@@ -123,12 +147,20 @@ body {
 				align-items: center;
 				gap: 32px;
 
+				.active {
+					color: #bd0000;
+				}
+
 				a {
 					color: #667085;
 					font-size: 16px;
 					font-style: normal;
 					font-weight: 600;
 					line-height: 24px;
+
+					&:hover {
+						color: #bd0000;
+					}
 				}
 			}
 		}
@@ -560,7 +592,7 @@ body {
 					padding: 10px 20px;
 
 					li {
-						padding: 20px 0 ;
+						padding: 20px 0;
 
 						a {
 							margin: 20px 0;

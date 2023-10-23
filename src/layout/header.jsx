@@ -5,6 +5,8 @@ import logo from '../public/images/logo.png'
 import '../global.scss'
 
 function Header() {
+	const [activeTop, setActiveTop] = useState(false)
+
 	const [active, setActive] = useState(false)
 
 	useEffect(() => {
@@ -28,14 +30,10 @@ function Header() {
 					<img src={logo} alt='logo' />
 				</Link>
 				<div className='header_center_wrap'>
-					<button className='header_btn'>
-						<div className='burger_wrap'>
-							<span className='burger1'></span>
-							<span className='burger2'></span>
-							<span className='burger3'></span>
-						</div>
+					<div className='header_btn' onClick={() => setActiveTop(!activeTop)}>
+						<div className={activeTop ? `activeHamburger` : `hamburger`} />
 						Categories
-					</button>
+					</div>
 					<div className='header_center'>
 						<NavLink to={'/'}>Zapchastlar</NavLink>
 						<NavLink to={'/'}>Kompaniya</NavLink>
@@ -55,6 +53,7 @@ function Header() {
 						>
 							<path
 								d='M17.5 17.5L13.875 13.875M15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667Z'
+								stroke='#667085'
 								strokeWidth='1.66667'
 								strokeLinecap='round'
 								strokeLinejoin='round'

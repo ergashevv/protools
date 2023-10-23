@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import ProductCard from '../../components/productCard'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -56,7 +57,9 @@ function Products({ title }) {
 				>
 					{data.map((item, index) => (
 						<SwiperSlide key={index}>
-							<ProductCard image={item.image} info={item.info} />
+							<Link to={"/product"} key={index}>
+								<ProductCard image={item.image} info={item.info} />
+							</Link>
 						</SwiperSlide>
 					))}
 				</Swiper>

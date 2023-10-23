@@ -8,7 +8,7 @@ function Product() {
 	return (
 		<div className='product'>
 			<ProductHero />
-			<Products title='Tavsiya etilganlar' key={1} />
+			<Products title='Tavsiya etilganlar' />
 		</div>
 	)
 }
